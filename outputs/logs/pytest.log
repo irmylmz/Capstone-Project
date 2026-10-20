@@ -1,0 +1,62 @@
+== pytest
+============================= test session starts ==============================
+platform darwin -- Python 3.12.7, pytest-9.1.1, pluggy-1.6.0 -- /Users/iremnuryilmaz/Desktop/venv/bin/python
+cachedir: .pytest_cache
+rootdir: /Users/iremnuryilmaz/Desktop/Projects/Capstone_Project/Capstone-Project
+configfile: pyproject.toml
+testpaths: tests
+plugins: anyio-4.6.2.post1
+collecting ... collected 50 items
+
+tests/test_dataset.py::test_source_id_ignores_segment_and_suffixes[Beni Hat\u0131rla (128kbit_AAC)Part002.png] PASSED [  2%]
+tests/test_dataset.py::test_source_id_ignores_segment_and_suffixes[Beni Hat\u0131rla (128kbit_AAC)Part017_range_doppler.png] PASSED [  4%]
+tests/test_dataset.py::test_source_id_ignores_segment_and_suffixes[Beni Hat\u0131rla (128kbit_AAC)Part002(1).png] PASSED [  6%]
+tests/test_dataset.py::test_source_id_ignores_segment_and_suffixes[Beni_Hat\u0131rla_128kbit_AAC_Part005.png] PASSED [  8%]
+tests/test_dataset.py::test_source_id_unicode_normalisation PASSED       [ 10%]
+tests/test_dataset.py::test_scan_returns_correct_labels PASSED           [ 12%]
+tests/test_dataset.py::test_scan_ignores_hidden_and_non_image_files PASSED [ 14%]
+tests/test_dataset.py::test_scan_missing_directory_raises PASSED         [ 16%]
+tests/test_dataset.py::test_scan_missing_class_folder_raises PASSED      [ 18%]
+tests/test_dataset.py::test_scan_unlabeled PASSED                        [ 20%]
+tests/test_dataset.py::test_deduplicate_removes_copies_and_conflicts PASSED [ 22%]
+tests/test_dataset.py::test_split_has_no_recording_leakage PASSED        [ 24%]
+tests/test_dataset.py::test_large_recordings_are_forced_into_train PASSED [ 26%]
+tests/test_dataset.py::test_split_without_holdout_candidates_raises PASSED [ 28%]
+tests/test_dataset.py::test_leakage_check_detects_shared_recording PASSED [ 30%]
+tests/test_dataset.py::test_split_csv_round_trip PASSED                  [ 32%]
+tests/test_dataset.py::test_load_missing_split_csv_raises PASSED         [ 34%]
+tests/test_dataset.py::test_torch_dataset_returns_tensor_and_label PASSED [ 36%]
+tests/test_dataset.py::test_data_loader_batches PASSED                   [ 38%]
+tests/test_dataset.py::test_torch_dataset_rejects_unlabeled PASSED       [ 40%]
+tests/test_dataset.py::test_corrupt_file_in_dataset_raises_clear_error PASSED [ 42%]
+tests/test_model.py::test_forward_output_shape[128-640] PASSED           [ 44%]
+tests/test_model.py::test_forward_output_shape[128-512] PASSED           [ 46%]
+tests/test_model.py::test_forward_rejects_wrong_channel_count PASSED     [ 48%]
+tests/test_model.py::test_model_has_trainable_parameters PASSED          [ 50%]
+tests/test_model.py::test_checkpoint_round_trip PASSED                   [ 52%]
+tests/test_model.py::test_missing_checkpoint_raises_clear_error PASSED   [ 54%]
+tests/test_model.py::test_corrupt_checkpoint_raises PASSED               [ 56%]
+tests/test_model.py::test_early_stopping_counts_epochs_without_improvement PASSED [ 58%]
+tests/test_model.py::test_trainer_saves_best_checkpoint PASSED           [ 60%]
+tests/test_model.py::test_predictor_returns_probabilities PASSED         [ 62%]
+tests/test_model.py::test_predictor_without_model_raises PASSED          [ 64%]
+tests/test_model.py::test_predictor_with_corrupt_image_raises PASSED     [ 66%]
+tests/test_preprocessing.py::test_load_rgb_image_drops_alpha PASSED      [ 68%]
+tests/test_preprocessing.py::test_load_missing_file_raises PASSED        [ 70%]
+tests/test_preprocessing.py::test_load_corrupt_file_raises PASSED        [ 72%]
+tests/test_preprocessing.py::test_crop_keeps_only_plot_area PASSED       [ 74%]
+tests/test_preprocessing.py::test_plot_box_scales_with_image_size PASSED [ 76%]
+tests/test_preprocessing.py::test_letterbox_preserves_aspect_ratio PASSED [ 78%]
+tests/test_preprocessing.py::test_letterbox_rejects_unknown_resample PASSED [ 80%]
+tests/test_preprocessing.py::test_load_and_preprocess_output_shape PASSED [ 82%]
+tests/test_preprocessing.py::test_alternative_input_size_is_configurable PASSED [ 84%]
+tests/test_preprocessing.py::test_channel_stats_in_unit_range PASSED     [ 86%]
+tests/test_preprocessing.py::test_channel_stats_empty_list_raises PASSED [ 88%]
+tests/test_preprocessing.py::test_tensor_conversion_normalises PASSED    [ 90%]
+tests/test_preprocessing.py::test_tensor_conversion_rejects_wrong_shape PASSED [ 92%]
+tests/test_preprocessing.py::test_image_file_to_tensor_matches_config PASSED [ 94%]
+tests/test_preprocessing.py::test_inspect_image_reports_valid_and_corrupt PASSED [ 96%]
+tests/test_preprocessing.py::test_channel_stats_round_trip PASSED        [ 98%]
+tests/test_preprocessing.py::test_missing_channel_stats_raises PASSED    [100%]
+
+============================= 50 passed in 58.98s ==============================
